@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/drawable/disable_button.xml" value="0.148" />
+        <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/drawable/selected_button.xml" value="0.148" />
+        <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/layout/activity_log_in.xml" value="0.176" />
         <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/layout/activity_main.xml" value="0.192481884057971" />
+        <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/layout/activity_register.xml" value="0.26145833333333335" />
         <entry key="..\:/Users/USER/Documents/Dicoding/Mobile Developer/SecuriCamApplication/app/src/main/res/layout/activity_splash.xml" value="0.2" />
       </map>
     </option>
