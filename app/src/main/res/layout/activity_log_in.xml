@@ -10,30 +10,33 @@
         android:id="@+id/tvLog_in"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="145dp"
+        android:layout_marginTop="100dp"
         android:alpha="0"
         android:text='@string/welcome'
+        android:textColor="@color/warna_utama"
         android:textAlignment="center"
         android:fontFamily="@font/kavoon"
-        android:textSize="40sp"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/tv_login"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:alpha="0"-->
-<!--        android:fontFamily="@font/grand_hotel"-->
-<!--        android:text="@string/theme"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/logo" />-->
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:alpha="0"
+        android:fontFamily="@font/antic_didone"
+        android:text='@string/welcome_continue'
+        android:textAlignment="center"
+        android:textColor="@color/warna_utama"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLog_in" />
+
+
 
     <TextView
         android:id="@+id/tv_email"
@@ -48,7 +51,7 @@
         android:textColor="@color/black"
         android:layout_marginStart="35dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLog_in" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
 
     <com.example.securicamapplication.customview.EdtEmail
         android:id="@+id/edt_email"

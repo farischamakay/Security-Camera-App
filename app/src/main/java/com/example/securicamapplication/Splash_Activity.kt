@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 
 class Splash_Activity : AppCompatActivity() {
+
     private lateinit var splashBinding: ActivitySplashBinding
     private val handler = Handler(Looper.getMainLooper())
 
@@ -15,13 +16,9 @@ class Splash_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         splashBinding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(splashBinding.root)
-
-        val actionbar = supportActionBar
-
-        actionbar?.title = " "
-
 
         handler.postDelayed({
             val splashIntent = Intent(this, LogInActivity::class.java)

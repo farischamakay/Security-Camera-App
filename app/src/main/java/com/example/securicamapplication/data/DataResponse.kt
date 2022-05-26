@@ -9,6 +9,9 @@ data class DataResponse (
     @field:SerializedName("success")
     var success : Boolean? = null,
 
+    @field:SerializedName("error")
+    var error : Boolean? = null,
+
     @field:SerializedName("message")
     var message : String?  = null,
 

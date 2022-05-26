@@ -144,7 +144,7 @@ class LogInActivity : AppCompatActivity() {
 
     private fun playAnimation() {
         val logoApp =ObjectAnimator.ofFloat(binding.tvLogIn, View.ALPHA, ALPHA).setDuration(DURATION)
-
+        val welcome = ObjectAnimator.ofFloat(binding.tvWelcome, View.ALPHA, ALPHA).setDuration(DURATION)
         val tvEmail = ObjectAnimator.ofFloat(binding.tvEmail, View.ALPHA, ALPHA).setDuration(DURATION)
         val edtEmail = ObjectAnimator.ofFloat(binding.edtEmail, View.ALPHA, ALPHA).setDuration(DURATION)
         val tvPassword = ObjectAnimator.ofFloat(binding.password, View.ALPHA, ALPHA).setDuration(DURATION)
@@ -155,6 +155,7 @@ class LogInActivity : AppCompatActivity() {
         AnimatorSet().apply {
             playSequentially(
                 logoApp,
+                welcome,
                 tvEmail,
                 edtEmail,
                 tvPassword,

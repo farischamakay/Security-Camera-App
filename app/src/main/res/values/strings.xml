@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SecuriCamApplication</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome">Welcome!</string>
+    <string name="register">Register</string>
+    <string name="welcome_continue">Sign in to continue</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="create_account">Don\'t have an Account ? Register</string>
