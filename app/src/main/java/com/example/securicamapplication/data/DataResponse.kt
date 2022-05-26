@@ -14,6 +14,4 @@ data class DataResponse (
 
     @field:SerializedName("message")
     var message : String?  = null,
-
-    @field:SerializedName("data") var data    : LogIn?    = LogIn()
 ) : Parcelable

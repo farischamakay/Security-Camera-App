@@ -24,24 +24,4 @@ interface ApiService {
         @Field("password") password: String
     ): Call<DataResponse>
 
-//    @Headers("Content-Type: application/json")
-//    @POST("auth/login")
-//    suspend fun login(@Body body: LoginDataPost ): Response<LoginResponse>
-//
-//    @Headers("Content-Type: application/json")
-//    @GET("user/all")
-//    suspend fun getUsers(@Header("x-access-token") token: String): Response<AllUserResponse>
-
-//    @Multipart
-//    @POST("stories")
-//    fun uploadStories(
-//        @Header("Authorization") token: String,
-//        @Part file: MultipartBody.Part,
-//        @Part("description") description: RequestBody
-//    ): Call<AddStory>
-//
-//    @GET("stories")
-//    fun getAllStories(
-//        @Header("Authorization") token: String
-//    ): Call<Stories>
 }

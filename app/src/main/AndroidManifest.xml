@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SecuriCamApplication">
         <activity
+            android:name=".ChoosenDeviceActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity

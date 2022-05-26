@@ -84,7 +84,7 @@ class LogInActivity : AppCompatActivity() {
             this
         ) { token: String ->
             if (token.isNotEmpty()) {
-                val i = Intent(this, MainActivity::class.java)
+                val i = Intent(this, ChoosenDeviceActivity::class.java)
                 startActivity(i)
             }
         }

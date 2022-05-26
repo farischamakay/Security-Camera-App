@@ -13,7 +13,8 @@
     <string name="name">Username</string>
     <string name="have_acc">Have an account? Log in</string>
     <string name="min_name">Name must be 2 characters or more</string>
-    <string name="description">Description</string>
+    <string name="camera">Camera</string>
+    <string name="viewer">Viewer</string>
     <string name="profile">Profile</string>
     <string name="add">Add Story</string>
     <string name="language">Change Language</string>
