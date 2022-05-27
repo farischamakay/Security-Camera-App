@@ -131,11 +131,13 @@ class RegisterActivity : AppCompatActivity() {
         val client = ApiConfig.getApiService().register(
             nameEdt.text.toString(),
             emailEdt.text.toString(),
-            passwordEdt.text.toString()
+            passwordEdt.text.toString(),
+            role = "CLIENT"
         )
         client.enqueue(object : Callback<DataResponse> {
             override fun onResponse(call: Call<DataResponse>, response: Response<DataResponse>) {
                 val responseBody = response.body()
+                Log.d("datalogin", "$response");
                 if (response.isSuccessful && responseBody != null) {
                     if (responseBody.error == true) {
                         Toast.makeText(

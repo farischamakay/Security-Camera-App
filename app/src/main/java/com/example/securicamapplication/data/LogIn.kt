@@ -5,27 +5,24 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class LogIn(
+data class LoginResult(
+    @SerializedName("success" ) var success : Boolean? = null,
+    @SerializedName("message" ) var message : String?  = null,
+    @SerializedName("data"    ) var data    : Data?    = Data()
 
-    @field:SerializedName("loginResult")
-    val loginResult: LoginResult? = null,
-
-    @field:SerializedName("error")
-    val error: Boolean? = null,
-
-    @field:SerializedName("message")
-    val message: String? = null
 ) : Parcelable
 
 @Parcelize
-data class LoginResult(
+data class Data(
 
-    @field:SerializedName("name")
-    val name: String? = null,
-
-    @field:SerializedName("userId")
-    val userId: String? = null,
-
-    @field:SerializedName("token")
-    var token: String? = null
+    @SerializedName("id"           ) var id           : String?           = null,
+    @SerializedName("username"     ) var username     : String?           = null,
+    @SerializedName("email"        ) var email        : String?           = null,
+    @SerializedName("password"     ) var password     : String?           = null,
+    @SerializedName("role"         ) var role         : String?           = null,
+    @SerializedName("fcm"          ) var fcm          : String?           = null,
+    @SerializedName("lastLoggedIn" ) var lastLoggedIn : String?              = null,
+    @SerializedName("connection"   ) var connection   : ArrayList<String> = arrayListOf(),
+    @SerializedName("tokenExpired" ) var tokenExpired : Int?              = null,
+    @SerializedName("accessToken"  ) var accessToken  : String?           = null
 ) : Parcelable

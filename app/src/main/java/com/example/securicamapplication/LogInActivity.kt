@@ -20,7 +20,6 @@ import com.example.securicamapplication.api.ApiConfig
 import com.example.securicamapplication.customview.BtnLogin
 import com.example.securicamapplication.customview.EdtEmail
 import com.example.securicamapplication.customview.EdtPassword
-import com.example.securicamapplication.data.LogIn
 import com.example.securicamapplication.data.LoginResult
 import retrofit2.Call
 import retrofit2.Callback
@@ -169,16 +168,18 @@ class LogInActivity : AppCompatActivity() {
 
     private fun login() {
         val client = ApiConfig.getApiService()
-            .login(emailEdt.text.toString(), passwordEdt.text.toString())
-        client.enqueue(object : Callback<LogIn> {
-            override fun onResponse(call: Call<LogIn>, response: Response<LogIn>) {
+            .login(emailEdt.text.toString(),
+                passwordEdt.text.toString())
+        client.enqueue(object : Callback<LoginResult> {
+            override fun onResponse(call: Call<LoginResult>, response: Response<LoginResult>) {
                 val responseBody = response.body()
+                Log.d("datalogin", "$response");
                 if (response.isSuccessful && responseBody != null) {
-                    if (responseBody.error == true) {
+                    if (responseBody.success == false) {
                         Toast.makeText(this@LogInActivity, responseBody.message, Toast.LENGTH_LONG)
                             .show()
                     } else {
-                        saveSession(responseBody.loginResult as LoginResult)
+                        saveSession(responseBody as LoginResult)
                         Toast.makeText(
                             this@LogInActivity,
                             getString(R.string.login_sucess),
@@ -193,7 +194,7 @@ class LogInActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<LogIn>, t: Throwable) {
+            override fun onFailure(call: Call<LoginResult>, t: Throwable) {
                 Log.e(ContentValues.TAG, "onFailure: ${t.message}")
                 Toast.makeText(this@LogInActivity, t.message, Toast.LENGTH_LONG).show()
             }
@@ -203,7 +204,7 @@ class LogInActivity : AppCompatActivity() {
 
 
     private fun saveSession(loginResult: LoginResult) {
-        loginViewModel.saveToken(loginResult.token as String)
+        loginViewModel.saveToken(loginResult.data?.accessToken as String)
         val i = Intent(this, MainActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(i)
